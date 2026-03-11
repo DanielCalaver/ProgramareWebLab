@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- I.2 Declarare Doctype - HTML5 -->
+<html>
+    <!-- I.3 Declarare head -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Pagina de prezentare a lui Calaver Daniel, doctorand la UNITBV, cu informatii despre educatie, hobby-uri si contact.">
+        <title>Pagina de prezentare</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- I.4.a declarare header -->
+        <header id="home">
+            <h1>Calaver Daniel</h1>
+            <p>Doctorant la UNITBV</p>
+        </header>
+        <!-- I.4.b declarare meniu de navigare -->
+        <nav id="meniu">
+            <ul class="button">
+                <li><a href="#home">Acasa</a></li>
+                <li><a href="#about">Despre</a></li>
+                <li><a href="#education">Educatie</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a id = "color_mode">🌙 Dark Mode</li>
+            </ul>
+        </nav>
+        <!-- I.4.c declarare main -->
+        <main>
+            <!-- I.4.c declarare sectiuni: about -->
+            <section id="about">
+                <h2>Despre mine</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla architecto deserunt cupiditate suscipit mollitia, nesciunt, ipsam voluptates recusandae obcaecati, numquam rerum voluptatum quisquam repudiandae omnis culpa eaque facere doloribus totam.</p>
+                <!-- 1.5 Imagine de profil -->
+                <img src="images/profil.jpg" alt="Poza mea" loading="lazy" width="200" height="200">
+            </section>
+            <!-- I.4.c declarare sectiuni: education -->
+            <section id="education">
+                <h2>Educație</h2>
+                <ol>
+                    <li>Doctorand UNITBV 2025-Prezent</li>
+                    <li>Master Cybersecurity 2023-2025</li>
+                    <li>Licenta Automatica 2015-2019</li>
+                    <li>Liceu info 2011-2015</li>
+                    <li>Generala 2007-2011</li>
+                    <li>Primara 2003-2007</li>
+                    <li>Gradinita 2000-2003</li>
+                </ol>
+            </section>
+            <!-- I.4.d structurare continut secundar -->
+            <aside>
+                <h2>Hobby-uri</h2>
+                <ul>
+                    <li>Ski</li>
+                    <li>Gatitul</li>
+                    <li>Jocuri video</li>
+                    <li>Calatorii</li>
+                </ul>
+                <blockquote>Citatul zilei "Talk is cheap show me the code" - Travis Linus</blockquote>
+            </aside>
+            <section id="projects">
+                <h2>Proiecte</h2>
+            </section>
+            <button type="button" id="scroll_button">Scroll Up</button>
+        </main>
+            <!-- I.4.e secțiune de contact -->
+        <footer id="contact">
+            <!-- IV.3 Legatura JavaScript cu formularul de contact -->
+            <!-- III.1 Formular de contact -->
+            <form>
+                <!-- III.3 label pentru nume -->
+                <label for="name">Nume:</label>
+                <!-- III.2 Campul pentru nume -->
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <br>
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <!-- III.4 Buton de trimitere -->
+                <!-- IV.5 Legatura butonului cu funcția submitForm -->
+                <button type="submit">Trimite</button>
+                <p id="form-feedback"></p> 
+            </form>
+            <p>Copyright &copy; 2026 Calaver Daniel</p>
+            <address>Email: <a href="mailto:daniel.calaver@unitbv.ro">daniel.calaver@unitbv.ro</a></address>
+        </footer>
+    <script src="js/array.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

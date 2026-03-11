@@ -1,0 +1,147 @@
+/* ============================================
+   Stiluri de bază
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    min-height: 100vh;
+}
+
+/* ============================================
+   Container principal
+   ============================================ */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    height: fit-content;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* ============================================
+   Formularul de input
+   ============================================ */
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#todo-input:focus {
+    border-color: #4a90e2;
+}
+
+#add-btn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+    background-color: #357abd;
+}
+
+/* ============================================
+   Contorul de task-uri
+   ============================================ */
+#task-count {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   Lista de task-uri
+   ============================================ */
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+    transition: all 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #e8ecf1;
+}
+
+.todo-item .task-text {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ============================================
+   Task completat
+   ============================================ */
+.todo-item.completed {
+    border-left-color: #28a745;
+    background-color: #f0fff0;
+}
+
+.todo-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ============================================
+   Butonul de ștergere
+   ============================================ */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ffeaea;
+}

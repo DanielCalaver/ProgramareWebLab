@@ -1,0 +1,10 @@
+Plugins de VS Code
+
+Auto Rename Tag
+Color Highlight
+CSS Peek
+ESLint
+Image Preview
+IntelliSense for CSS class names in HTML
+Live Server
+Path Intellisense

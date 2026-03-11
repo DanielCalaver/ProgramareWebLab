@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Calendar",
+        "tech":"HTML/CSS/JS",
+        "done":"False"
+    },
+    {
+        "name":"Calculator",
+        "tech":"HTML/CSS/JS",
+        "done":"False"
+    },
+    {
+        "name":"Prezentation",
+        "tech":"HTML/CSS",
+        "done":"True"
+    },
+    {
+        "name":"Interractive Interface",
+        "tech":"HTML/CSS/JS",
+        "done":"True"
+    }
+]
