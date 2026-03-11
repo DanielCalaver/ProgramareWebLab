@@ -18,6 +18,8 @@ function App() {
         return <Card key={index} title={item.title} description={item.description} />;
       })}
       <button onClick={() => setCount(count+1)}>Click</button>
+      <button onClick={() => setCount(count-1)}>Anticlick</button>
+      <button onClick={() => setCount(0)}>Reset</button>
       <p>Ai apasat de {count} ori</p>
     </div>
   );
