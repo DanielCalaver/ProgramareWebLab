@@ -1,7 +1,10 @@
+import Card from './Card';
+
 function App() {
   return (
     <div>
       <h1>Dashboard</h1>
+      <Card />
       <h2>Salut!</h2>
       <p>Dani</p>
       <ol>
