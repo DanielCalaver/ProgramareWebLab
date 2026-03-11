@@ -4,14 +4,9 @@ function App() {
   return (
     <div>
       <h1>Dashboard</h1>
-      <Card />
-      <h2>Salut!</h2>
-      <p>Dani</p>
-      <ol>
-        <li>Elementul 1</li>
-        <li>Elementul 2</li>
-        <li>Elementul 3</li>
-      </ol>
+      <Card title = "Proiect 1" description="Pagina personala cu HTML/CSS"/>
+      <Card title = "Proiect 2" description="Pagina interactiva cu JavaScript"/>
+      <Card title = "Proiect 3" description="Dashboard cu React"/>
     </div>
   );
 }
