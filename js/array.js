@@ -9,10 +9,10 @@ const ultimul_cuvant = arrayList.map(x => { const words = x.split(' '); return w
 const primul_an = ultimul_cuvant.map(x => x.split('-')[0]);
 const doilea_an = ultimul_cuvant.map(x => x.split('-')[1]);
 
-console.log(master_filter);
-console.log(liceu_filter);
-console.log(primul_cuvant);
-console.log(ultimul_cuvant);
+console.log(`master_filter: ${master_filter}`);
+console.log(`liceu_filter: ${liceu_filter}`);
+console.log(`primul_cuvant: ${primul_cuvant}`);
+console.log(`ultimul_cuvant: ${ultimul_cuvant}`);
 console.log('PRIMUL AN: ' + primul_an);
 console.log('AL 2-LEA AN: ' + doilea_an);
 
