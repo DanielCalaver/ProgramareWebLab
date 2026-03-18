@@ -3,6 +3,7 @@ import { useState } from 'react';
 import QuickNote from './QuickNote';
 import TodoList from './TodoList';
 import ContactForms from './ContactForm';
+import Clock from './Clock';
 
 function App() {
   const projects = [
@@ -15,6 +16,7 @@ function App() {
   const [count, setCount] = useState(0);
   return (
     <div>
+      <Clock />
       <h1>Dashboard</h1>
       {projects.map(function(item, index) {
         return <Card key={index} title={item.title} description={item.description} />;
