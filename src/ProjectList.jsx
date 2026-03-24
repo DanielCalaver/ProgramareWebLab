@@ -6,6 +6,8 @@ function ProjectList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [search, setSearch] = useState('');
+
     useEffect(function() {
         fetch('/data/projects.json')
             .then(function(response) {
@@ -32,9 +34,16 @@ function ProjectList() {
     return (
         <div>
             <h3>Proiecte</h3>
+            <input
+                value = {search}
+                onChange= {(e) => setSearch(e.target.value)}
+                placeholder='cauta proiect...'
+            />
             <ul>
             {
-                projects.map(function(project) {
+                projects.filter(function(p) {
+                    return p.title.toLowerCase().includes(search.toLowerCase());
+                }).map(function(project) {
                     return <Card title = {project.title} description = {project.tech}/>
                 })
             }
