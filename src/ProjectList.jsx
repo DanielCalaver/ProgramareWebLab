@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
+import ProjectStatistics from './ProjectStatistics';
 
 function ProjectList() {
     const [projects, setProjects] = useState([]);
@@ -48,6 +49,7 @@ function ProjectList() {
                 })
             }
             </ul>
+            <ProjectStatistics projects={projects} />
         </div>
     );
 }
