@@ -4,6 +4,7 @@ import QuickNote from './QuickNote';
 import TodoList from './TodoList';
 import ContactForms from './ContactForm';
 import Clock from './Clock';
+import ProjectList from './ProjectList';
 
 function App() {
   const projects = [
@@ -27,6 +28,7 @@ function App() {
       <p>Ai apasat de {count} ori</p>
       <QuickNote />
       <TodoList />
+      <ProjectList />
       <ContactForms />
     </div>
   );
