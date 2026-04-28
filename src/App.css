@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Dashboard container */
 #root > div {
     max-width: 900px;
@@ -180,4 +186,29 @@ h4 {
         --input-bg: #f8f8f8;
         --stat-bg: rgba(255, 119, 51, 0.1);
     }
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #2C3E50;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+nav a:hover { background: #34495E; }
+nav a.active { background: #FF7733; }
+
+footer {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
