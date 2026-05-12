@@ -56,22 +56,23 @@ app.get('/api/projects', async function(req, res) {
 
 app.get('/api/projects/:id', async function(req, res) {
     try {
-        const result = await Project.findById(req.params.id)
+        const result = await Project.findById(req.params.id);
         if (result) res.json(result);
-        else res.status(404).json({error: 'Proiectul nu a fost gasit!'})
+        else res.status(404).json({ error: 'Proiectul nu a fost gasit!' });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 });
 
-// app.get('/api/stats', function(req, res) {
-//     const stats = {
-//         "total": projects.length,
-//         "finalizate": projects.filter(p => p.done).length,
-//         "in progres": projects.filter(p => !p.done).length
-//     };
-//     res.json(stats);
-// });
+app.delete('/api/projects/:id', async function(req, res) {
+    try {
+        const result = await Project.findByIdAndDelete(req.params.id);
+        if (result) res.json({ message: 'Deleted' });
+        else res.status(404).json({ error: 'Proiectul nu a fost gasit!' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 app.listen(PORT, function() {
     console.log(`Server pornit pe http://localhost:${PORT}`);
