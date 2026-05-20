@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -5,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/dashboard')
+mongoose.connect(process.env.MONGO_URI)
   .then(function(){
     console.log('Conectat la MongoDB!');
   })
@@ -13,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/dashboard')
     console.log('Eroare conectare MongoDB:',err);   
   });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 const Project = require('./models/Project'); 
 
 
