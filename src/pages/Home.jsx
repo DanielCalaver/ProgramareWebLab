@@ -5,7 +5,7 @@ function Home() {
     const [error, setError] = useState(null);
 
     useEffect(function() {
-        fetch('http://localhost:3000/api/stats')
+        fetch('https://programareweblab.onrender.com/api/stats')
             .then(function(response) {
                 return response.json();
             })

@@ -9,10 +9,11 @@ function ProjectList() {
     const [search, setSearch] = useState('');
     const [title, setTitle] = useState('');
     const [tech, setTech] = useState('');
+    const API = "https://programareweblab.onrender.com"
 
     // 🔹 GET all projects
     useEffect(function () {
-        fetch('http://localhost:3000/api/projects')
+        fetch(API + '/api/projects')
             .then(function (response) {
                 if (!response.ok) {
                     throw new Error('Eroare server');
@@ -31,7 +32,7 @@ function ProjectList() {
 
     async function handleSubmit() {
         try {
-            const response = await fetch('http://localhost:3000/api/projects', {
+            const response = await fetch(API + '/api/projects', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -60,7 +61,7 @@ function ProjectList() {
     console.log(id);
     console.log(currentDone);
     const response = await fetch(
-      'http://localhost:3000/api/projects/' + id,
+      API + '/api/projects/' + id,
       {
         method: 'PUT',
         headers: {
@@ -85,7 +86,7 @@ function ProjectList() {
 
     async function handleDelete(id) {
         try {
-            const response = await fetch( 'http://localhost:3000/api/projects/' + id,
+            const response = await fetch(API + '/api/projects/' + id,
                 {
                     method: 'DELETE'
                 }
